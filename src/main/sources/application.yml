@@ -1,0 +1,22 @@
+server:
+  port: 8888
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*Mapper.xml
+  config-location: classpath:mybatis/mapper/config/sqlMapConfig.xml
+  type-aliases-package: com.tp.soft.entity
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mq?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: tp19900818
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 1000
+    pool:
+      max-active: 1024
+      min-idle: 200
+      max-wait: 10000
+      max-idle: 200
